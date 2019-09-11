@@ -45,7 +45,7 @@
 	
 	/* carga de las noticias */
 	$(document).ready(function(){
-	   $("#noticias").load("eventos.txt", function(response, status, xhr) {
+	   $("#noticias").load("http://www.manosdemadre.org/app/eventos.txt", function(response, status, xhr) {
 		  if ( status == "error" ) {
 			var msg = "Sorry but there was an error: ";
 			$( "#error3" ).html( msg + xhr.status + " " + xhr.statusText );
