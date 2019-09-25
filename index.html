@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+      Customize this policy to fit your own app's needs. For more guidance, see:
+          https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+      Some notes:
+          * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+          * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+          * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+              * Enable inline JS: add 'unsafe-inline' to default-src
+      -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Your app title -->
+  <title>Ministerio Católico Manos de Madre</title>
+
+  <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+      http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+   -->
+
+  <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+  <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-ocre">
+  <!-- Status bar overlay for full screen mode (PhoneGap) -->
+  <div class="statusbar-overlay"></div>
+
+  <!-- Views -->
+  <div class="views">
+    <!-- Index -->
+    <div class="view view-main">
+      <!-- Top Navbar-->
+      <div class="navbar bg-ocre color-white border-orange">
+        <div class="navbar-inner">
+          <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+          <div class="center sliding">Manos de Madre</div>
+        </div>
+      </div>
+      
+      <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+      <div class="pages navbar-through toolbar-through">
+        <!-- Page, "data-page" contains page name -->
+        <div id="index" data-page="index" class="page">
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-title"><strong>¡Bienvenidos a nuestra aplicación!</strong></div>
+              
+              <div class="content-block-inner">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.</p>
+                
+                <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                
+                <p>Suspendisse commodo adipiscing urna, a aliquet sem egestas in. Sed tincidunt dui a magna facilisis bibendum. Nunc euismod consectetur lorem vitae molestie. Proin mattis tellus libero, non hendrerit neque eleifend ac. Pellentesque interdum velit at lacus consectetur scelerisque et id dui. Praesent non fringilla dui, a elementum purus. Proin vitae lacus libero. Nunc eget lectus non mi iaculis interdum vel a velit. Nullam tincidunt purus id lacus ornare, at elementum turpis euismod. Cras mauris enim, congue eu nisl sit amet, pulvinar semper erat. Suspendisse sed mauris diam.</p>
+                
+                <p>Nam eu mauris leo. Pellentesque aliquam vehicula est, sed lobortis tellus malesuada facilisis. Fusce at hendrerit ligula. Donec eu nibh convallis, pulvinar enim quis, lacinia diam. Ut semper ac magna nec ornare. Integer placerat justo sed nunc suscipit facilisis. Vestibulum ac tincidunt augue. Duis eu aliquet mauris, vel luctus mauris. Nulla non augue nec diam pharetra posuere at in mauris.</p>
+                
+                <p>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom Toolbar-->
+      <div class="toolbar tabbar tabbar-labels bg-ocre color-white border-orange">
+        <div class="toolbar-inner">
+          <!-- Toolbar links -->
+          <!--<span class="tabbar-label">&copy; Ministerio Católico Manos de Madre</span>-->
+          <a href="nosotros.html" class="tab-links">
+            <i class="icon f7-icons">info_circle_fill</i>
+            <span class="tabbar-label">Nosotros</span>
+          </a>
+          <a href="oraciones.html" class="tab-links">
+            <i class="icon f7-icons">book_circle_fill</i>
+            <span class="tabbar-label">Oraciones</span>
+          </a>
+          <a href="eventos.html" class="tab-links">
+            <i class="icon f7-icons">calendar_circle_fill</i>
+            <span class="tabbar-label">Eventos</span>
+          </a>
+          <a href="contacto.html" class="tab-links">
+            <i class="icon f7-icons">envelope_circle_fill</i>
+            <span class="tabbar-label">Contacto</span>
+          </a>
+        </div>
+      </div>
+      <!-- /Bottom Toolbar-->
+    </div>
+    <!-- /Index -->
+  </div>
+  <!-- /Views -->
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>
